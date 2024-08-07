@@ -13,6 +13,7 @@ public class ExceptionHandlerController {
     public ResponseEntity<ErrorDto> handleDuplicateEmailException(Exception e) {
         ErrorDto errorDto = ErrorDto.builder()
                 .message(e.getMessage())
+                .errorCode("DEVELOPER_DUPLICATE_EMAIL")
                 .build();
         return new ResponseEntity<>(errorDto, HttpStatus.BAD_REQUEST);
     }
@@ -21,6 +22,7 @@ public class ExceptionHandlerController {
     public ResponseEntity<ErrorDto> handleDeveloperNotFoundException(Exception e) {
         ErrorDto errorDto = ErrorDto.builder()
                 .message(e.getMessage())
+                .errorCode("DEVELOPER_NOT_FOUND")
                 .build();
         return new ResponseEntity<>(errorDto, HttpStatus.BAD_REQUEST);
     }

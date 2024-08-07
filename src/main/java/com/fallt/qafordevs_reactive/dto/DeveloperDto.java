@@ -33,7 +33,7 @@ public class DeveloperDto {
                 .firstName(entity.getFirstName())
                 .lastName(entity.getLastName())
                 .email(entity.getEmail())
-                .specialty(entity.getSpeciality())
+                .specialty(entity.getSpecialty())
                 .status(entity.getStatus())
                 .build();
     }
@@ -44,7 +44,7 @@ public class DeveloperDto {
                 .firstName(firstName)
                 .lastName(lastName)
                 .email(email)
-                .speciality(specialty)
+                .specialty(specialty)
                 .status(status)
                 .build();
     }
